@@ -11,5 +11,7 @@ class MainActivity : AppCompatActivity() {
         Toast.makeText(this, R.string.welcome_alert, Toast.LENGTH_SHORT).show()
 
     //change something
+
+        //change something 2
     }
 }
