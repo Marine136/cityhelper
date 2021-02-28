@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name" translatable="false">cityhelper</string>
+    <string name="welcome_alert">Welcome to the app</string>
+</resources>
