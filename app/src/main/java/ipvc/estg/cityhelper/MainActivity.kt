@@ -12,6 +12,8 @@ class MainActivity : AppCompatActivity() {
 
     //change something
 
-        //change something 2
+        //change something 2~~
+
+        //funcionalidade 1
     }
 }
