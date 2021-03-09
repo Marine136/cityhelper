@@ -9,4 +9,7 @@
     <string name="signup">Sign Up</string>
     <string name="home">Home</string>
     <string name="home_text">Welcome again to the CityHelper application %user$d, here you can report problems to the city council and also keep your notes. You may use the bottom bar for navigation.</string>
+    <string name="map">Map</string>
+    <string name="notes_menu">Notes</string>
+    <string name="account">Account</string>
 </resources>

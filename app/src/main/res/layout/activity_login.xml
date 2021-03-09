@@ -16,7 +16,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.051"
-        app:srcCompat="@drawable/ic_buildings" />
+        app:srcCompat="@drawable/ic_buildings"
+        tools:ignore="VectorDrawableCompat" />
 
     <TextView
         android:id="@+id/textView2"
@@ -64,7 +65,7 @@
         android:layout_marginTop="35dp"
         android:text="@string/email"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:textColor="#FF9E80"
+        android:textColor="#D5542C"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.112"
         app:layout_constraintStart_toStartOf="parent"
@@ -79,7 +80,7 @@
         android:layout_marginTop="15dp"
         android:text="@string/password"
         android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        android:textColor="#FF9E80"
+        android:textColor="#D5542C"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.112"
         app:layout_constraintStart_toStartOf="parent"
@@ -113,7 +114,7 @@
         android:layout_height="42dp"
         android:layout_marginTop="20dp"
         android:text="@string/login"
-        app:backgroundTint="#FF9E80"
+        app:backgroundTint="#D5542C"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2" />
@@ -140,7 +141,8 @@
         android:onClick="openNotes"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/button"
-        app:srcCompat="@drawable/ic_post_it" />
+        app:srcCompat="@drawable/ic_post_it"
+        tools:ignore="VectorDrawableCompat" />
 
     <TextView
         android:id="@+id/textView9"
@@ -148,7 +150,7 @@
         android:layout_height="wrap_content"
         android:text="@string/signup"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium"
-        android:textColor="#FF9E80"
+        android:textColor="#D5542C"
         app:layout_constraintBottom_toBottomOf="@+id/textView8"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.758"

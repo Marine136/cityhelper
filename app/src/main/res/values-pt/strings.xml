@@ -8,4 +8,7 @@
     <string name="signup">Registe-se</string>
     <string name="home">Página-Principal</string>
     <string name="home_text">Bem vindo à aplicação, aqui podes reportar problemas ao municipio ou apontar as tuas notas. Podes usar a barra de baixo para navegares na aplicação.</string>
+    <string name="map">Mapa</string>
+    <string name="notes_menu">Notas</string>
+    <string name="account">Conta</string>
 </resources>

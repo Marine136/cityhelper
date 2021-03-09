@@ -6,13 +6,13 @@ import android.os.Bundle
 import android.widget.Toast
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class NotesActivity : AppCompatActivity() {
+class AccountActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_notes)
+        setContentView(R.layout.activity_account)
 
         val bottomNavigation = findViewById<BottomNavigationView>(R.id.bottom_navigation)
-        bottomNavigation.selectedItemId = R.id.notes
+        bottomNavigation.selectedItemId = R.id.account
 
         bottomNavigation.setOnNavigationItemSelectedListener { item ->
             when (item.itemId) {
@@ -27,17 +27,18 @@ class NotesActivity : AppCompatActivity() {
                     true
                 }
                 R.id.notes -> {
-                    Toast.makeText(this, R.string.notes, Toast.LENGTH_SHORT).show()
+                    startActivity(Intent(applicationContext, NotesActivity::class.java))
+                    overridePendingTransition(0, 0)
                     true
                 }
                 R.id.account -> {
-                    startActivity(Intent(applicationContext, AccountActivity::class.java))
-                    overridePendingTransition(0, 0)
+                    Toast.makeText(this, R.string.account, Toast.LENGTH_SHORT).show()
                     true
                 }
                 else -> false
             }
         }
-    }
 
+
+    }
 }
