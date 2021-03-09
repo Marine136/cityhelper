@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="welcome_alert">Bem vindo à aplicação!</string>
+    <string name="login">Entrar</string>
+    <string name="login_message">Olá, bem-vindo de volta!</string>
+    <string name="password">Palavra-passe</string>
+    <string name="notes">As suas notas</string>
+    <string name="signup">Registe-se</string>
+    <string name="home">Página-Principal</string>
+    <string name="home_text">Bem vindo à aplicação, aqui podes reportar problemas ao municipio ou apontar as tuas notas. Podes usar a barra de baixo para navegares na aplicação.</string>
 </resources>
