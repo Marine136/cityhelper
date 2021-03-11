@@ -3,7 +3,11 @@ package ipvc.estg.cityhelper
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
 import android.widget.Toast
+import android.widget.Toolbar
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class NotesActivity : AppCompatActivity() {
@@ -40,4 +44,19 @@ class NotesActivity : AppCompatActivity() {
         }
     }
 
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        val inflater: MenuInflater = menuInflater
+        inflater.inflate(R.menu.menu_add_note, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId){
+            R.id.add_note -> {
+                startActivity(Intent(applicationContext, AddNote::class.java))
+                true
+            }
+            else -> super.onOptionsItemSelected(item)
+        }
+    }
 }

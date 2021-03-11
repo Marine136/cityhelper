@@ -7,11 +7,21 @@
     tools:context=".NotesActivity">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:text="@string/notes_menu"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"/>
+        android:id="@+id/notesTitle"
+        android:layout_marginBottom="10dp"
+        android:text="@string/my_notes"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#000000"
+        tools:text="@string/notes"
+        android:layout_marginLeft="10dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/notesTitle"
+        android:layout_above="@id/bottom_navigation"/>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:layout_width="match_parent"
@@ -22,5 +32,6 @@
         app:itemIconTint="@drawable/selector"
         app:menu="@menu/menu_navigation"
         android:layout_alignParentBottom="true"/>
+
 
 </RelativeLayout>

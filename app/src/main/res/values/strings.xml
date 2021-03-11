@@ -12,4 +12,9 @@
     <string name="map">Map</string>
     <string name="notes_menu">Notes</string>
     <string name="account">Account</string>
+    <string name="my_notes">My notes</string>
+    <string name="hint_title">Title</string>
+    <string name="hint_description">Description</string>
+    <string name="add_note">Add a note</string>
+    <string name="save">Save</string>
 </resources>
