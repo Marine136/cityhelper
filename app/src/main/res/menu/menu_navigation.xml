@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item
-        android:id="@+id/home"
-        android:title="@string/home"
-        android:icon="@drawable/ic_house"/>
 
     <item
         android:id="@+id/map"
@@ -14,10 +10,10 @@
         android:id="@+id/notes"
         android:title="@string/notes_menu"
         android:icon="@drawable/ic_sticky_notes"/>
-    <item
-        android:id="@+id/account"
-        android:title="@string/account"
-        android:icon="@drawable/ic_account"/>
 
+    <item
+        android:id="@+id/settings"
+        android:title="@string/settings"
+        android:icon="@drawable/ic_settings"/>
 
 </menu>

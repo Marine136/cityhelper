@@ -16,22 +16,19 @@ class MapActivity : AppCompatActivity() {
 
         bottomNavigation.setOnNavigationItemSelectedListener { item ->
             when (item.itemId) {
-                R.id.home -> {
-                    startActivity(Intent(applicationContext, MainActivity::class.java))
-                    overridePendingTransition(0, 0)
-                    true
-                }
                 R.id.map -> {
                     Toast.makeText(this, R.string.map, Toast.LENGTH_SHORT).show()
                     true
                 }
                 R.id.notes -> {
+                    finish()
                     startActivity(Intent(applicationContext, NotesActivity::class.java))
                     overridePendingTransition(0, 0)
                     true
                 }
-                R.id.account -> {
-                    startActivity(Intent(applicationContext, AccountActivity::class.java))
+                R.id.settings -> {
+                    finish()
+                    startActivity(Intent(applicationContext, SettingsActivity::class.java))
                     overridePendingTransition(0, 0)
                     true
                 }

@@ -9,12 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Cityhelper">
-        <activity android:name=".AddNote"></activity>
-        <activity android:name=".AccountActivity" />
+        <activity android:name=".AddNoteActivity"></activity>
         <activity android:name=".MapActivity" />
         <activity android:name=".NotesActivity" />
-        <activity android:name=".MainActivity" />
-        <activity android:name=".Login">
+        <activity android:name=".SettingsActivity" />
+        <activity android:name=".LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

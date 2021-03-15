@@ -6,11 +6,10 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 
-class Login : AppCompatActivity() {
+class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
-        Toast.makeText(this, R.string.welcome_alert, Toast.LENGTH_SHORT).show()
     }
 
     fun openNotes(view: View) {

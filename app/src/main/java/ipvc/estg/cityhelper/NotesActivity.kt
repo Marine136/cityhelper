@@ -6,11 +6,12 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
+import android.view.View
 import android.widget.Toast
-import android.widget.Toolbar
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class NotesActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_notes)
@@ -20,12 +21,8 @@ class NotesActivity : AppCompatActivity() {
 
         bottomNavigation.setOnNavigationItemSelectedListener { item ->
             when (item.itemId) {
-                R.id.home -> {
-                    startActivity(Intent(applicationContext, MainActivity::class.java))
-                    overridePendingTransition(0, 0)
-                    true
-                }
                 R.id.map -> {
+                    finish()
                     startActivity(Intent(applicationContext, MapActivity::class.java))
                     overridePendingTransition(0, 0)
                     true
@@ -34,8 +31,9 @@ class NotesActivity : AppCompatActivity() {
                     Toast.makeText(this, R.string.notes, Toast.LENGTH_SHORT).show()
                     true
                 }
-                R.id.account -> {
-                    startActivity(Intent(applicationContext, AccountActivity::class.java))
+                R.id.settings -> {
+                    finish()
+                    startActivity(Intent(applicationContext, SettingsActivity::class.java))
                     overridePendingTransition(0, 0)
                     true
                 }
@@ -53,7 +51,7 @@ class NotesActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return when (item.itemId){
             R.id.add_note -> {
-                startActivity(Intent(applicationContext, AddNote::class.java))
+                startActivity(Intent(applicationContext, AddNoteActivity::class.java))
                 true
             }
             else -> super.onOptionsItemSelected(item)
