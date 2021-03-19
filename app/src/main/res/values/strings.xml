@@ -15,4 +15,9 @@
     <string name="hint_description">Description</string>
     <string name="add_note">Add a note</string>
     <string name="save">Save</string>
+    <string name="empty_not_saved">Note not saved because it is empty.</string>
+    <string name="success">Note successfully added!</string>
+    <string name="insuccess">Please fill out all fields.</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
 </resources>

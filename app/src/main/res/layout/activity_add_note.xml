@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -13,53 +12,35 @@
         android:layout_height="wrap_content"
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
         android:textColor="#000000"
-        android:text="@string/add_note"
-        />
+        android:text="@string/add_note" />
 
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textField"
+    <EditText
+        android:id="@+id/editNoteTitle"
         android:padding="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/textView5"
-        android:hint="@string/hint_title"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        android:hint="@string/hint_title" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            />
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textField2"
+    <EditText
+        android:id="@+id/editNoteDescription"
         android:padding="10dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textField"
+        android:layout_below="@+id/editNoteTitle"
         android:lines="4"
-        android:hint="@string/hint_description"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        android:hint="@string/hint_description" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:textAlignment="textStart"
-            android:layout_width="match_parent"
-            android:layout_height="230dp"
-            android:inputType="textMultiLine"
-            android:gravity="start" />
 
-    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
-        android:id="@+id/button2"
-        android:padding="10dp"
-        android:layout_margin="10dp"
+        android:id="@+id/buttonSaveNote"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/textField2"
+        android:layout_below="@id/editNoteDescription"
+        android:layout_margin="10dp"
         android:layout_marginTop="75dp"
+        android:padding="10dp"
         android:text="@string/save" />
 
 

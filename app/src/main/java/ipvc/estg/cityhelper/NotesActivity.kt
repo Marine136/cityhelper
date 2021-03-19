@@ -1,21 +1,45 @@
 package ipvc.estg.cityhelper
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
-import android.view.View
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import ipvc.estg.cityhelper.adapters.NoteListAdapter
+import ipvc.estg.cityhelper.viewmodel.NoteViewModel
+
+
+
 
 class NotesActivity : AppCompatActivity() {
+
+    private lateinit var editNoteViewModel: NoteViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_notes)
 
+        //recycler view
+        val recyclerView = findViewById<RecyclerView>(R.id.recyclerview)
+        val adapter = NoteListAdapter()
+        recyclerView.adapter = adapter
+        recyclerView.layoutManager = LinearLayoutManager(this)
+
+        //view model
+        editNoteViewModel = ViewModelProvider(this).get(NoteViewModel::class.java)
+        editNoteViewModel.allNotes.observe(this, Observer {note ->
+            adapter.setData(note)
+        })
+
+
+        //bottom nav bar
         val bottomNavigation = findViewById<BottomNavigationView>(R.id.bottom_navigation)
         bottomNavigation.selectedItemId = R.id.notes
 
@@ -42,16 +66,17 @@ class NotesActivity : AppCompatActivity() {
         }
     }
 
+    //Botão de adicionar nota
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         val inflater: MenuInflater = menuInflater
         inflater.inflate(R.menu.menu_add_note, menu)
         return true
     }
-
+    //Botão de adicionar nota
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return when (item.itemId){
+        return when (item.itemId) {
             R.id.add_note -> {
-                startActivity(Intent(applicationContext, AddNoteActivity::class.java))
+                startActivity(Intent(this, AddNoteActivity::class.java))
                 true
             }
             else -> super.onOptionsItemSelected(item)
