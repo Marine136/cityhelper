@@ -1,39 +1,20 @@
 package ipvc.estg.cityhelper.viewmodel
 
 import android.app.Application
-import androidx.lifecycle.*
+import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.viewModelScope
 import ipvc.estg.cityhelper.db.NoteRepository
-import ipvc.estg.cityhelper.db.NoteRoomDatabase
 import ipvc.estg.cityhelper.entities.Note
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
 
+
+//DO NOT HOLD references to views or contexts! ViewModels are retained throughout lifecycle configuration changes
 class NoteViewModel(application: Application): AndroidViewModel(application) {
 
-    val allNotes: LiveData<List<Note>>
-    private val repository: NoteRepository
+    private val repository: NoteRepository = NoteRepository(application, viewModelScope)
 
-    init {
-        val noteDao = NoteRoomDatabase.getDatabase(application).noteDao()
-        repository = NoteRepository(noteDao)
-        allNotes = repository.allNotes
-    }
-
-    fun addNote(note: Note){
-        viewModelScope.launch(Dispatchers.IO) {
-            repository.addNote(note)
-        }
-    }
-
-    fun deleteNote(note: Note){
-        viewModelScope.launch(Dispatchers.IO){
-            repository.deleteNote(note)
-        }
-    }
-    fun updateNote(note: Note){
-        viewModelScope.launch(Dispatchers.IO){
-            repository.updateNote(note)
-        }
-    }
-
+    fun getAllNotes() = repository.getAllNotes()
+    fun insert(note: Note) = repository.insert(note)
+    fun update(note: Note) = repository.update(note)
+    fun delete(note: Note) = repository.delete(note)
+    fun deleteAll() = repository.deleteAll()
 }

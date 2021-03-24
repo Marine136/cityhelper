@@ -20,4 +20,8 @@
     <string name="title">Título</string>
     <string name="description">Descrição</string>
     <string name="successUpdate">Nota editada com sucesso!</string>
+    <string name="edit_note">Editar Nota</string>
+    <string name="insuccess2">Nota não foi inserida</string>
+    <string name="insuccess3">A nota não foi salva!</string>
+    <string name="delete_all">Todas as notas foram apagadas!</string>
 </resources>

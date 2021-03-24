@@ -21,4 +21,8 @@
     <string name="title">Title</string>
     <string name="description">Description</string>
     <string name="successUpdate">Note successfully updated!</string>
+    <string name="edit_note">Edit Note</string>
+    <string name="insuccess2">Note can\'t be added</string>
+    <string name="insuccess3">Note not saved!</string>
+    <string name="delete_all">All notes were deleted!</string>
 </resources>
