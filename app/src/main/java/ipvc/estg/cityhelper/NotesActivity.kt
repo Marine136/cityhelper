@@ -13,9 +13,8 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import ipvc.estg.cityhelper.adapters.NoteListAdapter
+import ipvc.estg.cityhelper.entities.Note
 import ipvc.estg.cityhelper.viewmodel.NoteViewModel
-
-
 
 
 class NotesActivity : AppCompatActivity() {
@@ -34,9 +33,42 @@ class NotesActivity : AppCompatActivity() {
 
         //view model
         editNoteViewModel = ViewModelProvider(this).get(NoteViewModel::class.java)
-        editNoteViewModel.allNotes.observe(this, Observer {note ->
+        editNoteViewModel.allNotes.observe(this, Observer { note ->
             adapter.setData(note)
         })
+
+        adapter.setOnItemClickListener(object:NoteListAdapter.OnItemClickListener {
+            override fun onItemClick(note: Note) {
+                Intent(this@NotesActivity, UpdateNoteActivity::class.java)
+                intent.putExtra(UpdateNoteActivity.EXTRA_TITLE, note.titulo)
+                intent.putExtra(UpdateNoteActivity.EXTRA_DESCRIPTION, note.titulo)
+                intent.putExtra(UpdateNoteActivity.EXTRA_ID, note.id)
+                startActivity(intent)
+            }
+        })
+
+        /*    DELETE ON SWIPE
+        val mIth = ItemTouchHelper(
+            object : ItemTouchHelper.SimpleCallback(
+                0,
+                ItemTouchHelper.LEFT
+            ) {
+                override fun onMove(
+                    recyclerView: RecyclerView,
+                    viewHolder: ViewHolder, target: ViewHolder
+                ): Boolean {
+                    val fromPos = viewHolder.adapterPosition
+                    val toPos = target.adapterPosition
+                    // move item in `fromPos` to `toPos` in adapter.
+                    return true // true if moved, false otherwise
+                }
+
+                override fun onSwiped(viewHolder: ViewHolder, direction: Int) {
+                    editNoteViewModel.deleteNote(adapter.getNoteAt(viewHolder.adapterPosition))
+                    Toast.makeText(this@NotesActivity, "Nota apagada", Toast.LENGTH_SHORT).show()
+                }
+            })
+*/
 
 
         //bottom nav bar
@@ -64,6 +96,10 @@ class NotesActivity : AppCompatActivity() {
                 else -> false
             }
         }
+    }
+
+     fun onItemClick(position: Int) {
+        Toast.makeText(this@NotesActivity, "TEST: " + position, Toast.LENGTH_SHORT).show()
     }
 
     //Botão de adicionar nota

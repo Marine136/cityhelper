@@ -20,4 +20,5 @@
     <string name="insuccess">Please fill out all fields.</string>
     <string name="title">Title</string>
     <string name="description">Description</string>
+    <string name="successUpdate">Note successfully updated!</string>
 </resources>

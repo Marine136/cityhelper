@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UpdateNoteActivity">
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_marginLeft="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#000000"
+        android:text="@string/add_note" />
+
+    <EditText
+        android:id="@+id/updateNoteTitle"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView5"
+        android:hint="@string/hint_title" />
+
+    <EditText
+        android:id="@+id/updateNoteDescription"
+        android:padding="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/updateNoteTitle"
+        android:lines="4"
+        android:hint="@string/hint_description" />
+
+
+
+    <Button
+        android:id="@+id/buttonUpdateNote"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/updateNoteDescription"
+        android:layout_margin="10dp"
+        android:layout_marginTop="75dp"
+        android:padding="10dp"
+        android:text="@string/save" />
+
+</RelativeLayout>

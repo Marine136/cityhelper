@@ -19,4 +19,5 @@
     <string name="insuccess">Por favor, preencha ambos os campos!</string>
     <string name="title">Título</string>
     <string name="description">Descrição</string>
+    <string name="successUpdate">Nota editada com sucesso!</string>
 </resources>
