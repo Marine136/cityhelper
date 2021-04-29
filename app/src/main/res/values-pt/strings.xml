@@ -24,4 +24,8 @@
     <string name="insuccess2">Nota não foi inserida</string>
     <string name="insuccess3">A nota não foi salva!</string>
     <string name="delete_all">Todas as notas foram apagadas!</string>
+    <string name="emailerror">O e-mail é obrigatório</string>
+    <string name="passworderror">Password incorreta</string>
+    <string name="loginerror">Credenciais erradas</string>
+    <string name="errorwebservice">Erro a fazer o pedido, verifique a sua conexão à internet.</string>
 </resources>

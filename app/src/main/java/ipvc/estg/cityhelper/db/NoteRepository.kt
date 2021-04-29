@@ -8,8 +8,7 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
-// Declares the DAO as a private property in the constructor. Pass in the DAO
-// instead of the whole database, because you only need access to the DAO
+
 class NoteRepository(application: Application, private val coroutineScope: CoroutineScope) {
 
     private val noteDao = NotesDatabase.getDatabase(application, coroutineScope).noteDao()
@@ -28,10 +27,6 @@ class NoteRepository(application: Application, private val coroutineScope: Corou
 
     fun deleteAll() {
         coroutineScope.launch(Dispatchers.IO) { noteDao.deleteAllNotes() }
-    }
-
-    fun getNote(id: Int): LiveData<Note> {
-        return noteDao.getNote(id)
     }
 
     fun getAllNotes(): LiveData<List<Note>> {

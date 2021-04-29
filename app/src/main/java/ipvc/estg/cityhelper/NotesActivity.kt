@@ -76,7 +76,7 @@ class NotesActivity : AppCompatActivity(), View.OnClickListener, OnItemClickList
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
-        when{
+        when {
             requestCode == INTENT_REQUEST_ADD_NOTE && resultCode == RESULT_OK && data != null -> {
                 val titleText = data.getStringExtra(EXTRA_TITLE) ?: ""
                 val descriptionText = data.getStringExtra(EXTRA_DESCRIPTION) ?: ""
@@ -88,7 +88,7 @@ class NotesActivity : AppCompatActivity(), View.OnClickListener, OnItemClickList
             }
             requestCode == INTENT_REQUEST_EDIT_NOTE && resultCode == RESULT_OK && data != null -> {
                 val id = data.getIntExtra(EXTRA_ID, -1)
-                if(id == -1) {
+                if (id == -1) {
                     Toast.makeText(this, R.string.insuccess2, Toast.LENGTH_SHORT).show()
                     return
                 }
@@ -109,7 +109,7 @@ class NotesActivity : AppCompatActivity(), View.OnClickListener, OnItemClickList
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return when(item.itemId) {
+        return when (item.itemId) {
             R.id.delete_all_notes -> {
                 noteViewModel.deleteAll()
                 Toast.makeText(this, R.string.delete_all, Toast.LENGTH_SHORT).show()

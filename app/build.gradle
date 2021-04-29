@@ -22,7 +22,7 @@ android {
 
     defaultConfig {
         applicationId "ipvc.estg.cityhelper"
-        minSdkVersion 16
+        minSdkVersion 26
         targetSdkVersion 30
         versionCode 1
         versionName "1.0"
@@ -79,6 +79,11 @@ dependencies {
     // UI
     implementation "androidx.constraintlayout:constraintlayout:$rootProject.constraintLayoutVersion"
     implementation "com.google.android.material:material:$rootProject.materialVersion"
+
+    //retrofit
+    implementation 'com.google.code.gson:gson:2.8.5'
+    implementation 'com.squareup.retrofit2:retrofit:2.4.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.4.0'
 
     // Testing
     testImplementation "junit:junit:$rootProject.junitVersion"

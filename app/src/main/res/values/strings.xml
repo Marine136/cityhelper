@@ -25,4 +25,8 @@
     <string name="insuccess2">Note can\'t be added</string>
     <string name="insuccess3">Note not saved!</string>
     <string name="delete_all">All notes were deleted!</string>
+    <string name="emailerror">Email is required</string>
+    <string name="passworderror">Wrong password</string>
+    <string name="loginerror">Wrong credentials</string>
+    <string name="errorwebservice">Error making the request. Check your internet question</string>
 </resources>
