@@ -28,4 +28,5 @@
     <string name="passworderror">Password incorreta</string>
     <string name="loginerror">Credenciais erradas</string>
     <string name="errorwebservice">Erro a fazer o pedido, verifique a sua conexão à internet.</string>
+    <string name="logout">Terminar sessão</string>
 </resources>
