@@ -29,4 +29,5 @@
     <string name="loginerror">Credenciais erradas</string>
     <string name="errorwebservice">Erro a fazer o pedido, verifique a sua conexão à internet.</string>
     <string name="logout">Terminar sessão</string>
+    <string name="description_required">Descrição necessária</string>
 </resources>

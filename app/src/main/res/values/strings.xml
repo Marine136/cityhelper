@@ -35,4 +35,19 @@
     <string name="pref_is_user_login" translatable="false">isUserLogin</string>
     <string name="pref_email" translatable="false">email</string>
     <string name="pref_user_id" translatable="false">id_user</string>
+    <string name="description_required">Description is required</string>
+    <string name="error_uploading">error uploading</string>
+    <string name="ok">Sucesso</string>
+    <string name="problemDeleteError">error deleting</string>
+    <string name="problemNotFound">problem not found</string>
+    <string name="errordeletingmarker">Error deleting marker</string>
+    <string name="markernotfound">Marker not found</string>
+    <string name="markerdeleted">marker deleted</string>
+    <string name="cancel">Cancel</string>
+    <string name="delete_marker_confirm">Are you sure you want to delete?</string>
+    <string name="marker_required">Marker required</string>
+    <string name="nothing_changed">Nothing changed</string>
+    <string name="error_updating_data">Error updating</string>
+    <string name="empty_fields">Campos vazios</string>
+
 </resources>

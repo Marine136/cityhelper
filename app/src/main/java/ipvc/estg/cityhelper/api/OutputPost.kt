@@ -1,6 +1,6 @@
 package ipvc.estg.cityhelper.api
 
-data class LoginResponse(
+data class OutputPost(
     val status:Boolean,
     val error: String,
     val MSG:String

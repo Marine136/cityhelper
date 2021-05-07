@@ -8,7 +8,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Toast
 import ipvc.estg.cityhelper.api.EndPoints
-import ipvc.estg.cityhelper.api.LoginResponse
+import ipvc.estg.cityhelper.api.OutputPost
 import ipvc.estg.cityhelper.api.ServiceBuilder
 import ipvc.estg.cityhelper.api.User
 import kotlinx.android.synthetic.main.activity_login.*
@@ -72,14 +72,14 @@ class LoginActivity : AppCompatActivity() {
                     val request = ServiceBuilder.buildService(EndPoints::class.java)
                     val call = request.checkLogin(email, password)
 
-                    call.enqueue(object : retrofit2.Callback<LoginResponse> {
+                    call.enqueue(object : retrofit2.Callback<OutputPost> {
                         override fun onResponse(
-                            call: Call<LoginResponse>,
-                            response: Response<LoginResponse>
+                            call: Call<OutputPost>,
+                            response: Response<OutputPost>
                         ) {
                             if (response.isSuccessful) {
 
-                                val op: LoginResponse = response.body()!!
+                                val op: OutputPost = response.body()!!
 
                                 if (!op.status) {
                                     when (op.error) {
@@ -156,7 +156,7 @@ class LoginActivity : AppCompatActivity() {
                             }
                         }
 
-                        override fun onFailure(call: Call<LoginResponse>, t: Throwable) {
+                        override fun onFailure(call: Call<OutputPost>, t: Throwable) {
                             Toast.makeText(
                                 this@LoginActivity,
                                 R.string.errorwebservice,
