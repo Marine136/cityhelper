@@ -25,6 +25,7 @@ class AddEditNoteActivity : AppCompatActivity() {
 
         this.supportActionBar?.setDisplayHomeAsUpEnabled(true)
         this.supportActionBar?.setHomeAsUpIndicator(R.drawable.ic_close)
+//erro=
 
         when (intent.hasExtra(EXTRA_ID)) {
             true -> {
