@@ -23,7 +23,7 @@ class LoginActivity : AppCompatActivity() {
 
         val sharedPrefs: SharedPreferences =
             getSharedPreferences(getString(R.string.pref_file_key), Context.MODE_PRIVATE)
-
+//push
         val isLoggedIn = sharedPrefs.getBoolean(getString(R.string.pref_is_user_login), false)
 
         val emailSaved = sharedPrefs.getString(getString(R.string.pref_email), "")
